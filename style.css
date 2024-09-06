@@ -1,0 +1,154 @@
+* {
+    font-family: 'Figtree', Arial, Helvetica, sans-serif;
+    background-color: #FBF0D9;
+    font-size: 16px;
+    color: #5F4B32;
+}
+
+/* MAIN */
+
+#main {
+    width: 900px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* BUTTONS */
+
+.btn {
+    padding: 12px 20px;
+    margin: 0px 5px;
+    cursor: pointer;
+    border-radius: 18px;
+}
+
+/* STROKE */
+
+.stroke {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2px !important;
+    --stroke-colour: #5F4B32;
+}
+
+.stroke .inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background-color: #FBF0D9;
+    border-radius: 15px;
+    padding: 10px 18px;
+}
+
+.stroke::before {
+    content: "";
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+    background: var(--stroke-colour);
+    z-index: 0;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.stroke:hover {
+    background: linear-gradient(
+        90deg,
+        #FBF0D9,
+        #5F4B32
+    );
+}
+
+.stroke .inner:active {
+    background: #5F4B32;
+    color: #FBF0D9;
+}
+
+/* GRAY */
+
+.gray {
+    background-color: #ECECEC;
+    transition: background-color .3s ease-in-out;
+}
+
+.gray:hover {
+    background-color: #dddddd;
+}
+
+.gray:active {
+    background-color: #dad3d3;
+}
+
+/* GRADIENT */
+
+.gradient {
+    background: linear-gradient(25deg, #ECECEC, #DFDFDF);
+    transition: all .3s ease-in-out;
+}
+
+.gradient:hover {
+    animation: rotateBg .01s ease-in-out;
+}
+
+@keyframes rotateBg {
+    0% {background-position: 10% 0%}
+    /*25% {background-position: 10% 0%}*/
+    50% {background-position: 91% 100%}
+    /*75% {background-position: 10% 0%}*/
+    100% {background-position: 10% 0%}
+}
+
+.gradient:active {
+    font-size: 14px;
+}
+
+/* TRANSPARENT */
+
+.transparent {
+    background-color: #ecdbb7;
+    transition: all .2s ease-in-out;
+}
+
+.transparent:hover {
+    font-size: 17px;
+}
+
+.transparent:active {
+    background-color: #dec694;
+}
+
+/* GOLDEN */
+
+.golden {
+    background-color: #DFB25A;
+    transition: all .2s ease-in-out;
+    color: #FBF0D9;
+}
+
+.golden:hover {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.golden:active {
+    background-color: #c79b43;
+}

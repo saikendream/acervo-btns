@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Submit do Acervo Amaranto</title>
+</head>
+<body>
+    <div id="main">
+        <div id="form-wrapper">
+            <div class="text-submit">
+                <form action="#" method="post">
+                    <input type="text" id="input_submit" minlength="3" required>
+                    <label for="input_submit">Pesquisar usuário</label>
+                    <button type="submit">&gt</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const strokeBtn = document.querySelector(".stroke");
+
+        strokeBtn.onmouseover = function() {
+            strokeBtn.style.setProperty("--stroke-colour", "linear-gradient(90deg, #FBF0D9, #5F4B32)");
+        };
+
+        strokeBtn.onmouseout = function() {
+            strokeBtn.style.setProperty("--stroke-colour", "#5F4B32");
+        };
+    </script>
+</body>
+</html>
